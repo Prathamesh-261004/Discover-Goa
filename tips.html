@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>✈️ Travel Tips – Explore Goa Smarter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- AOS Animation -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <!-- Lottie -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(8px);
+    }
+
+    .navbar-brand {
+      color: #0ff;
+      font-weight: bold;
+      font-size: 1.7rem;
+      animation: pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { text-shadow: 0 0 5px #0ff; }
+      100% { text-shadow: 0 0 15px #0ff, 0 0 30px #0ff4; }
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1606567593493-0acbf8f7b64b?auto=format&fit=crop&w=1500&q=80') no-repeat center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .hero div {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #0ff;
+      margin: 50px 0 30px;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    .tip-card {
+      background: #111;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 15px #0ff4;
+      transition: transform 0.3s;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px #0ff9;
+    }
+
+    .lottie-icon {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
+    .parallax {
+      background: url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1500&q=80') no-repeat center/cover;
+      height: 60vh;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    .btn-confetti {
+      background: #0ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 30px;
+      padding: 12px 25px;
+      margin: 20px auto;
+      display: inline-block;
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    footer {
+      background: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Goa Travel Tips</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+    
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-in">
+    <div>
+      <h1>Smart Travel in Goa</h1>
+      <p>Insider Advice for a Safe, Memorable & Joyful Trip</p>
+    </div>
+  </section>
+
+  <!-- Parallax Break -->
+  <div class="parallax" data-aos="zoom-in"></div>
+
+  <!-- Tips -->
+  <section class="container">
+    <h2 class="section-title" data-aos="fade-up">Ultimate Travel Guide</h2>
+    <div class="row">
+
+      <!-- Tip Cards -->
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="tip-card text-center">
+          <lottie-player class="lottie-icon" src="https://assets7.lottiefiles.com/private_files/lf30_rpgp3spv.json" background="transparent" speed="1" loop autoplay></lottie-player>
+          <h4>Local Laws</h4>
+          <p>Public drinking is banned. Avoid carrying drugs or indulging in water sports without a life jacket.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="tip-card text-center">
+          <lottie-player class="lottie-icon" src="https://assets2.lottiefiles.com/packages/lf20_qltquzse.json" background="transparent" speed="1" loop autoplay></lottie-player>
+          <h4>Emergency Info</h4>
+          <p><strong>Police:</strong> 100 | <strong>Ambulance:</strong> 108 | <strong>Tourist Helpline:</strong> 1363</p>
+        </div>
+      </div>
+
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="tip-card text-center">
+          <lottie-player class="lottie-icon" src="https://assets3.lottiefiles.com/packages/lf20_ygwzcfqp.json" background="transparent" speed="1" loop autoplay></lottie-player>
+          <h4>Best Season</h4>
+          <p>Visit during October to March for pleasant weather, vibrant festivals, and clean beaches.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="tip-card text-center">
+          <lottie-player class="lottie-icon" src="https://assets4.lottiefiles.com/private_files/lf30_oqpbtola.json" background="transparent" speed="1" loop autoplay></lottie-player>
+          <h4>Transport Hacks</h4>
+          <p>Rent a bike for ₹300–₹500/day. Ubers don't work well here—use local taxis or pre-book tours.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="tip-card text-center">
+          <lottie-player class="lottie-icon" src="https://assets2.lottiefiles.com/packages/lf20_uk7qzxdv.json" background="transparent" speed="1" loop autoplay></lottie-player>
+          <h4>Beach Etiquette</h4>
+          <p>Don’t litter, harass marine life, or leave food waste. Respect beach shack boundaries & locals.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center">
+      <button class="btn btn-confetti" onclick="launchConfetti()">Celebrate Goa</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>&copy; 2025 Goa Travel Guide • Built with 🌴 and ☀️</footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    AOS.init();
+
+    function launchConfetti() {
+      confetti({
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+    }
+  </script>
+</body>
+</html>

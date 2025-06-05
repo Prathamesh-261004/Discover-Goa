@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>📞 Contact Us – Explore Goa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- AOS Animation -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <!-- Lottie -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+  <style>
+    body {
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+                  url('https://images.unsplash.com/photo-1585160426925-d1681fbc9f79?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px #0ff;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.6rem;
+      color: #0ff;
+      text-shadow: 0 0 8px #0ff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background-attachment: fixed;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #0ff;
+      text-shadow: 0 0 20px #0ff;
+    }
+
+    .contact-form {
+      background: rgba(0,0,0,0.6);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #0ff7;
+    }
+
+    .form-control {
+      background-color: #111;
+      border: 1px solid #0ff6;
+      color: #fff;
+    }
+
+    .btn-custom {
+      background: #0ff;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #0ff;
+    }
+    .btn-custom:hover {
+      background: #00f0f0;
+      box-shadow: 0 0 20px #0ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      font-size: 0.9rem;
+      background: #000;
+      margin-top: 50px;
+    }
+
+    .lottie-icon {
+      width: 100px;
+      margin: auto;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Explore Goa</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-in">
+    <div class="container">
+      <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_6zqvkvzv.json" background="transparent" speed="1" autoplay loop class="lottie-icon"></lottie-player>
+      <h1 data-aos="fade-up">Get in Touch with Us</h1>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="container my-5" data-aos="zoom-in">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <form class="contact-form" id="contactForm">
+          <div class="mb-3">
+            <label>Name</label>
+            <input type="text" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label>Message</label>
+            <textarea class="form-control" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-custom w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Explore Goa | Designed with 🌴 and ❤️
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200, once: true });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      confetti({
+        particleCount: 200,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+      alert("🎉 Thank you for contacting us!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
